@@ -1,0 +1,29 @@
+<div>
+  <h2>Login</h2>
+  <form (ngSubmit)="onLogin()">
+    <div class="text-field">
+      <label for="username"> Username : </label>
+      <input
+        type="text"
+        id="username"
+        name="username"
+        [(ngModel)]="username"
+        required
+      />
+    </div>
+    <div class="text-field">
+      <label for="password"> Password: </label>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        [(ngModel)]="password"
+        required
+      />
+    </div>
+
+    <button type="submit">Login</button>
+    <button class="bgColor" (click)="goToRegister()">Register</button>
+  </form>
+  <!-- <p *ngIf="loginFailed"> Login Failed. Please Check your credentials.</p> -->
+</div>
